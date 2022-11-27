@@ -14,8 +14,13 @@
   </head>
   <body>
     <div class="root">
-      <h1>Counter</h1>
-      <my-counter></my-counter>
+      <h1>Counter 100</h1>
+      <my-counter count="100" color="red"></my-counter>
+      <script>
+        document.querySelector('my-counter').addEventListener('count', (e) => {
+          document.querySelector('h1').innerText = `Counter ${e.detail}`;
+        });
+      </script>
     </div>
     <script type="text/javascript" src="./index.js"></script>
   </body>
